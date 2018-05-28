@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>响应示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        div.parent {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        div.child {
+            width: 5rem;
+            height: 5rem;
+            background: red;
+            border: 1px solid black;
+            font-size: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 5px black;
+            text-shadow: 0 0 5px black;
+        }
+
+        @media screen and (max-width: 321px) {
+            body {
+                font-size: 20px
+            }
+        }
+
+        @media screen and (min-width: 321px) and (max-width:400px) {
+            body {
+                font-size: 22px
+            }
+        }
+
+        @media screen and (min-width: 400px) {
+            body {
+                font-size: 24px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child" id="child1">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+
+
+
+    <script>
+        // let html = document.querySelector('html')
+        // let pageWidth = window.innerWidth //获取屏幕宽度
+        // let size = 20 * (pageWidth / 375) + 'px' //通过实时的屏幕宽跟基准屏幕宽比较，然后就能得出实时的根字体大小
+
+        // html.style.fontSize = size //改变根字体大小
+        // let font = document.querySelector('#child1').style.fontSize
+
+        // let f = (()=>{
+        //     let cache = {}
+        //     return (num) =>{
+        //         if(cache[num] !==undefined) return cache[num]
+        //         let sum = 1
+        //         for(let i =num; i > 0; i--){
+        //             sum *= i
+        //         }
+        //         cache[num] = sum
+        //         console.log(cache)
+        //         return sum
+        //     }
+
+        // })()
+
+        // console.time('first')
+        // f(1000)
+        // console.timeEnd('first')
+
+        // console.time('second')
+        // f(1000)
+        // console.timeEnd('second')
+
+
+        // console.log(f(5))
+        // f(5)
+
+        var fn;
+
+        function foo() {
+            var a = 2;
+
+           return function baz(){
+               console.log(a)
+           }
+        }
+
+        fn =foo();
+        fn(); // 2
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function exectime(sleepTime) {
+        let date1 = new Date()
+
+        let currentTime = date1.getTime()
+        let endTime = date1.getTime() + sleepTime
+
+        while (currentTime < endTime) {
+            let data2 = new Date()
+            currentTime = data2.getTime()
+
+        }
+    }
+    console.log(1)
+    exectime(3000)
+    console.log(2)
+</script>
+
+</html>
